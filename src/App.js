@@ -1,39 +1,22 @@
-import Categories from "./components/categories/categories";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import HomePage from './pages/home/Home';
+import AboutPage from './pages/about/About';
+import RootLayout from './pages/Root';
+
+const router = createBrowserRouter([
+  {
+     path: '/',
+     element: <RootLayout />,
+     children: [
+       { path: '/', element: <HomePage /> },
+       { path: '/about', element: <AboutPage /> },
+     ],   
+    },
+]);
 
 const App = () => {
-  
-  const categories = [
-    {
-      "id": 1,
-      "title": "hats",
-      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
-    },
-    {
-      "id": 2,
-      "title": "jackets",
-      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
-    },
-    {
-      "id": 3,
-      "title": "sneakers",
-      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
-    },
-    {
-      "id": 4,
-      "title": "womens",
-      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
-    },
-    {
-      "id": 5,
-      "title": "mens",
-      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
-    }
-  ]
-  
-  
-  return (
-   <Categories categories={categories} />
-  );
+  return <RouterProvider router={router} />
 }
 
 export default App;
