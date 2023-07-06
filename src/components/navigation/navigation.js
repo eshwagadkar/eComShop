@@ -1,12 +1,20 @@
 import { Link } from 'react-router-dom';
 
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+
+import './navigation.styles.scss';
 const Navigation = () => {
     return (
         <header>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
+            <nav className='navigation'>
+                 {/* Logo Container */}
+                 <Link to="/" className='logo-container'>
+                    <Logo className='logo'/>
+                 </Link>
+
+                {/* Navbar links */}
+                <ul className='nav-links-container'>
+                    <li className='nav-link'><Link to="/about">About</Link></li>
                 </ul>
             </nav>
         </header>
