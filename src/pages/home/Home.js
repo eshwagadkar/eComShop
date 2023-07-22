@@ -31,10 +31,7 @@ const HomePage = () => {
   ]
   
   
-  return <>
-      <h1>Home Page</h1>
-      <Categories categories={categories} />
-    </>
+  return <Categories categories={categories} />
 }
 
 export default HomePage;
