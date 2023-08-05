@@ -15,6 +15,7 @@ const Navigation = () => {
                 {/* Navbar links */}
                 <ul className='nav-links-container'>
                     <li className='nav-link'><Link to="/about">About</Link></li>
+                    <li className='nav-link'><Link to="/signin">SignIn</Link></li>
                 </ul>
             </nav>
         </header>
