@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/home/Home';
 import AboutPage from './pages/about/About';
 import RootLayout from './pages/Root';
-import Authenticate from './pages/auth/authenticate';
+import Authenticate from './pages/authentication/authenticate';
 
 const router = createBrowserRouter([
   {
