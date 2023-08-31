@@ -4,6 +4,8 @@
 import SignUpForm from '../../components/signUpForm/signUpForm';
 import SignInForm from '../../components/signInForm/signInForm';
 
+import './authentication.styles.scss';
+
 const Authenticate = () => {
 
     // useEffect( () => {
@@ -19,8 +21,10 @@ const Authenticate = () => {
 
     return (
         <>
+        <div className='authenticaton-container'>
             <SignInForm />
             <SignUpForm />
+        </div>
         </>
     );
 }
