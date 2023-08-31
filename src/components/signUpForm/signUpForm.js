@@ -59,6 +59,7 @@ const SignUpForm = () => {
     return <>
         <div className='signup-container'>
             <h2>Don't have an account?</h2>
+            <span>Sign up with your email and password</span>
             <form onSubmit={submitHandler} >
                 {/* Display Name Input */}
                 <FormInput label='Display Name' type='text'  onChange={changeHandler} name='displayName' value={displayName} required />
